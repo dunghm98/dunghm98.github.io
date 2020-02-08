@@ -38,7 +38,6 @@ function firstQuestion(){
     $('#no').css("top", topY);
     $('#yes').css("left", leftNo);
     $('#yes').css("top", topNO);
-    console.log('kk');
 }
 // move random button póition
 function moveButton() {
@@ -66,6 +65,10 @@ $('#no').mousemove(function() {
         moveButton();
     n++;
 });
+$('#no').click(() => {
+    if (screen.width>=900)
+        switchButton();
+})
 
 // generate text in input
 function textGenerate() {
